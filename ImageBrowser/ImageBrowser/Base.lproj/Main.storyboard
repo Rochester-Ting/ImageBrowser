@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zbm-vt-m9J">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="xKN-Pu-w80">
+            <objects>
+                <collectionViewController id="Zbm-vt-m9J" customClass="HomeViewController" customModule="ImageBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aLg-KW-hYo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1zd-XY-DJ0">
+                            <size key="itemSize" width="108" height="97"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gLW-cH-iPG" customClass="RRCell" customModule="ImageBrowser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="108" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="108" height="97"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ToS-ve-uNw">
+                                            <rect key="frame" x="0.0" y="0.0" width="108" height="97"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ToS-ve-uNw" secondAttribute="bottom" id="KGe-QC-PhX"/>
+                                    <constraint firstItem="ToS-ve-uNw" firstAttribute="leading" secondItem="gLW-cH-iPG" secondAttribute="leading" id="Smv-g9-vvf"/>
+                                    <constraint firstItem="ToS-ve-uNw" firstAttribute="top" secondItem="gLW-cH-iPG" secondAttribute="top" id="TJQ-8g-SVM"/>
+                                    <constraint firstAttribute="trailing" secondItem="ToS-ve-uNw" secondAttribute="trailing" id="nYI-sU-3p7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="image" destination="ToS-ve-uNw" id="gB4-Xa-E3z"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Zbm-vt-m9J" id="YyX-w1-uIs"/>
+                            <outlet property="delegate" destination="Zbm-vt-m9J" id="MyY-5n-9Co"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="flowLayout" destination="1zd-XY-DJ0" id="Fx5-G2-RFu"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVc-LE-tEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="104.7976011994003"/>
+        </scene>
+    </scenes>
+</document>
